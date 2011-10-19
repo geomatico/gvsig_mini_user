@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="lib/commons-compress-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/dspace-perst-4.21.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.android.common-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.android.spatialindex.base-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.gvsig.mini.compat-0.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.gvsig.mini.geom-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.gvsig.mini.remoteservices-0.2.5.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.tilerastercache-0.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.tilerastercache.wms-0.4.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.0-alpha5.jar"/>
+	<classpathentry kind="lib" path="lib/jts-1.11.jar"/>
+	<classpathentry kind="lib" path="lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/kxml2-2.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-over-slf4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.compat-2.0-SNAPSHOT-se.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.compat-2.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.lib.api-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.lib.impl-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.lib.spi-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.prov.gml-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.prov.kml-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.gpe.prov.xml-2.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.maven.base.tools-1.0.8-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.tools.lib-3.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlpull.lib.api-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlpull.lib.impl-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlpull.lib.spi-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlpull.prov.kxml-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlpull.prov.stax-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlschema.lib.api-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlschema.lib.impl-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/org.gvsig.xmlschema.lib.spi-2.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-android-1.6.1-RC1.jar"/>
+	<classpathentry kind="lib" path="lib/stax-1.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl-2.4.0.jar"/>
+	<classpathentry kind="lib" path="lib/es.prodevelop.android.gvsig.mini.lib-2.0.0-SNAPSHOT.jar" sourcepath="/es.prodevelop.android.gvsig.mini.lib/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
