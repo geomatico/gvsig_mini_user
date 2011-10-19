@@ -38,6 +38,8 @@
 	<classpathentry kind="lib" path="lib/slf4j-android-1.6.1-RC1.jar"/>
 	<classpathentry kind="lib" path="lib/stax-1.2.0.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl-2.4.0.jar"/>
-	<classpathentry kind="lib" path="lib/es.prodevelop.android.gvsig.mini.lib-2.0.0-SNAPSHOT.jar" sourcepath="/es.prodevelop.android.gvsig.mini.lib/src"/>
+	<classpathentry kind="src" path="es.prodevelop.android.gvsig.mini.lib_src"/>
+	<classpathentry kind="src" path="com.markupartist.android.widget.actionbar_src"/>
+	<classpathentry kind="src" path="es.prodevelop.android.common.encryption_src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

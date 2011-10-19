@@ -30,4 +30,21 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>com.markupartist.android.widget.actionbar_src</name>
+			<type>2</type>
+			<locationURI>_android_com_markupartist_android_widget_actionbar_1465f384/src</locationURI>
+		</link>
+		<link>
+			<name>es.prodevelop.android.common.encryption_src</name>
+			<type>2</type>
+			<locationURI>_android_es_prodevelop_android_common_encryption_b26c7189/src</locationURI>
+		</link>
+		<link>
+			<name>es.prodevelop.android.gvsig.mini.lib_src</name>
+			<type>2</type>
+			<locationURI>_android_es_prodevelop_android_gvsig_mini_lib_a71f0817/src</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
