@@ -24,13 +24,14 @@ public final class R {
         public static final int shrink_from_topright_to_bottomleft=0x7f04000c;
     }
     public static final class array {
-        public static final int cache_modes=0x7f0a0002;
-        public static final int cache_modes_values=0x7f0a0003;
-        public static final int cache_strategies=0x7f0a0000;
-        public static final int cache_strategies_values=0x7f0a0001;
-        public static final int mock_provider_options=0x7f0a0005;
-        public static final int settings_properties=0x7f0a0004;
-        public static final int timeout_labels=0x7f0a0006;
+        public static final int cache_modes=0x7f0a0003;
+        public static final int cache_modes_values=0x7f0a0004;
+        public static final int cache_strategies=0x7f0a0001;
+        public static final int cache_strategies_values=0x7f0a0002;
+        public static final int mock_provider_options=0x7f0a0006;
+        public static final int settings_properties=0x7f0a0005;
+        public static final int sort_options=0x7f0a0000;
+        public static final int timeout_labels=0x7f0a0007;
     }
     public static final class attr {
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -243,10 +244,13 @@ containing a value of this type.
         public static final int zoom_scales_rotate=0x7f0200b8;
     }
     public static final class id {
+        public static final int EditText01=0x7f0b0038;
         public static final int LinearLayout01=0x7f0b0028;
+        public static final int LinearLayout02=0x7f0b003a;
         public static final int ProgressBar01=0x7f0b001e;
         public static final int ReportView=0x7f0b0016;
         public static final int SecondaryProgress=0x01010000;
+        public static final int SpinnerSort=0x7f0b0039;
         public static final int TextView01=0x7f0b0029;
         public static final int actionbar=0x7f0b000a;
         public static final int actionbar_actions=0x7f0b0007;
@@ -270,8 +274,8 @@ containing a value of this type.
         public static final int check_child=0x7f0b0030;
         public static final int check_parent=0x7f0b0034;
         public static final int close_img_button=0x7f0b0010;
-        public static final int desc=0x7f0b003d;
-        public static final int dist=0x7f0b003e;
+        public static final int desc=0x7f0b0040;
+        public static final int dist=0x7f0b0041;
         public static final int download_description_text=0x7f0b0017;
         public static final int download_perc_text=0x7f0b001f;
         public static final int download_tiles_button=0x7f0b0023;
@@ -287,19 +291,19 @@ containing a value of this type.
         public static final int footer=0x7f0b002e;
         public static final int header2=0x7f0b002a;
         public static final int icon=0x7f0b0000;
-        public static final int img=0x7f0b003b;
+        public static final int img=0x7f0b003e;
         public static final int list_header=0x7f0b0024;
-        public static final int map_options=0x7f0b003f;
+        public static final int map_options=0x7f0b0042;
         public static final int password_edit=0x7f0b000e;
         public static final int password_view=0x7f0b000d;
-        public static final int poi_desc=0x7f0b003c;
-        public static final int poi_detail=0x7f0b0038;
-        public static final int poi_img=0x7f0b003a;
-        public static final int poi_row=0x7f0b0039;
+        public static final int poi_desc=0x7f0b003f;
+        public static final int poi_detail=0x7f0b003b;
+        public static final int poi_img=0x7f0b003d;
+        public static final int poi_row=0x7f0b003c;
         public static final int screen=0x7f0b0002;
         public static final int scroll=0x7f0b002c;
         public static final int section_text=0x7f0b0025;
-        public static final int show_options=0x7f0b0040;
+        public static final int show_options=0x7f0b0043;
         public static final int spinner_edit=0x7f0b0015;
         public static final int sub=0x7f0b0031;
         public static final int sub_num=0x7f0b0032;
@@ -337,10 +341,11 @@ containing a value of this type.
         public static final int route_start_image_button=0x7f030017;
         public static final int search_expandable_child=0x7f030018;
         public static final int search_expandable_group=0x7f030019;
-        public static final int street_row=0x7f03001a;
-        public static final int streetview_image_button=0x7f03001b;
-        public static final int twitter_image_button=0x7f03001c;
-        public static final int weather_image_button=0x7f03001d;
+        public static final int search_list=0x7f03001a;
+        public static final int street_row=0x7f03001b;
+        public static final int streetview_image_button=0x7f03001c;
+        public static final int twitter_image_button=0x7f03001d;
+        public static final int weather_image_button=0x7f03001e;
     }
     public static final class string {
         public static final int GetFeatureInfoFunc_0=0x7f060085;
@@ -426,6 +431,7 @@ containing a value of this type.
         public static final int WMSLayersActivity_3=0x7f060063;
         public static final int action_bar_title=0x7f0600ce;
         public static final int actionbar_activity_not_found=0x7f060002;
+        public static final int advanced_search=0x7f0600df;
         public static final int alert_dialog_cache=0x7f06006f;
         public static final int alert_dialog_cache_title=0x7f060070;
         public static final int alert_dialog_cancel=0x7f06006e;
@@ -442,8 +448,12 @@ containing a value of this type.
         public static final int back=0x7f06000b;
         public static final int calculate_route=0x7f0600c5;
         public static final int cancel=0x7f060006;
+        public static final int cat_dist=0x7f0600e4;
         public static final int clean_pois=0x7f0600cb;
         public static final int clean_route=0x7f0600cd;
+        public static final int clear=0x7f0600e0;
+        public static final int clear_filter=0x7f0600d3;
+        public static final int distance=0x7f0600d5;
         public static final int download_guides_text=0x7f0600d1;
         public static final int download_tiles_01=0x7f060076;
         public static final int download_tiles_02=0x7f060077;
@@ -464,6 +474,7 @@ containing a value of this type.
         public static final int error=0x7f060005;
         public static final int error_connecting_server=0x7f060008;
         public static final int fatal_error=0x7f06001d;
+        public static final int filter=0x7f0600d2;
         public static final int getFeatureInfo=0x7f060020;
         public static final int hello=0x7f060000;
         public static final int in_offline_mode=0x7f0600d0;
@@ -485,6 +496,8 @@ containing a value of this type.
  Missing prefs 
          */
         public static final int no=0x7f06000d;
+        public static final int no_results=0x7f0600d4;
+        public static final int no_sort=0x7f0600d8;
         public static final int not_ask=0x7f060019;
         /**  Missing prefs 
  Missing prefs 
@@ -497,10 +510,17 @@ containing a value of this type.
         public static final int please_wait=0x7f060007;
         public static final int portrait=0x7f06001a;
         public static final int relaunch=0x7f0600c0;
+        public static final int rest_dist=0x7f0600e5;
         public static final int search=0x7f06000f;
+        public static final int search_by=0x7f0600db;
         public static final int search_clear_yesno=0x7f06001f;
+        public static final int search_filter=0x7f0600dd;
         public static final int search_hint=0x7f06001e;
         public static final int search_pois=0x7f0600cc;
+        public static final int search_prefix=0x7f0600d9;
+        public static final int search_results=0x7f0600e2;
+        public static final int search_text=0x7f0600da;
+        public static final int searching=0x7f0600e1;
         public static final int select_mail_client=0x7f060016;
         /**  Missing prefs 
  Missing prefs 
@@ -567,6 +587,10 @@ containing a value of this type.
         public static final int settings_twitter_user=0x7f0600a9;
         public static final int settings_update=0x7f060098;
         public static final int share=0x7f060015;
+        public static final int show_search_results=0x7f0600e3;
+        public static final int sort_distance=0x7f0600d6;
+        public static final int sort_name=0x7f0600d7;
+        public static final int sort_results=0x7f0600dc;
         public static final int start_point=0x7f0600c3;
         /** Where (%s) is a number 
          */
@@ -577,6 +601,7 @@ containing a value of this type.
         public static final int title_settings_tilling_mode=0x7f06009d;
         public static final int title_settings_tilling_strategy=0x7f060091;
         public static final int twitter_go_settings=0x7f0600ab;
+        public static final int type=0x7f0600de;
         public static final int typeof=0x7f060014;
         public static final int unknown=0x7f06006a;
         public static final int warning=0x7f060004;

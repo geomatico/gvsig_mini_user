@@ -1,15 +1,23 @@
 package org.geomatico.miniuser;
 
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.ZoomControls;
+import es.prodevelop.gvsig.mini.R;
+import es.prodevelop.gvsig.mini.action.MapControlAction;
 import es.prodevelop.gvsig.mini.app.Initializer;
 import es.prodevelop.gvsig.mini.common.CompatManager;
 import es.prodevelop.gvsig.mini.common.IContext;
@@ -26,6 +34,7 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 
 	private MapView mapView;
 	private ZoomControls zoomControls;
+	private ActionBar actionBar;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -60,7 +69,21 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 					mapView.getMapViewController().zoomOut();
 				}
 			});
+
 			setContentView(relativeLayout);
+
+			getWindow().addContentView(
+					LayoutInflater.from(this)
+							.inflate(R.layout.actionbars, null),
+					new ViewGroup.LayoutParams(
+							ViewGroup.LayoutParams.FILL_PARENT,
+							ViewGroup.LayoutParams.WRAP_CONTENT));
+
+			actionBar = (ActionBar) findViewById(com.markupartist.android.widget.actionbar.R.id.actionbar);
+			actionBar.addAction(new MapControlAction(mapView,
+					R.drawable.arrow_on, new PanControl()));
+			actionBar.addAction(new MapControlAction(mapView,
+					R.drawable.arrowdown, new DoubleTapZoom()));
 		}
 	}
 
@@ -85,8 +108,8 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 					metrics.widthPixels, metrics.heightPixels);
 
 			// Configure controls
-			view.addControl(new PanControl());
-			view.addControl(new DoubleTapZoom());
+//			view.addControl(new PanControl());
+//			view.addControl(new DoubleTapZoom());
 
 			view.addMapViewListener(this);
 		} catch (BaseException e) {
@@ -122,5 +145,10 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 
 	@Override
 	public void defaultContextToShow() {
+	}
+
+	@Override
+	public void exclusiveControlChanged() {
+		actionBar.refreshSelectableActions();
 	}
 }
