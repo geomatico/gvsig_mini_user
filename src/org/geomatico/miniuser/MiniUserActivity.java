@@ -1,8 +1,5 @@
 package org.geomatico.miniuser;
 
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.Action;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,9 +10,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.ZoomControls;
+
+import com.markupartist.android.widget.ActionBar;
+
 import es.prodevelop.gvsig.mini.R;
 import es.prodevelop.gvsig.mini.action.MapControlAction;
 import es.prodevelop.gvsig.mini.app.Initializer;
@@ -43,6 +42,9 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 		mapView = createMapView();
 
 		if (mapView != null) {
+			/*
+			 * Add zoom controls
+			 */
 			RelativeLayout relativeLayout = new RelativeLayout(this);
 			relativeLayout.addView(mapView, new RelativeLayout.LayoutParams(
 					LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
@@ -72,18 +74,40 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 
 			setContentView(relativeLayout);
 
+			/*
+			 * Add actionbar
+			 */
 			getWindow().addContentView(
 					LayoutInflater.from(this)
 							.inflate(R.layout.actionbars, null),
 					new ViewGroup.LayoutParams(
 							ViewGroup.LayoutParams.FILL_PARENT,
 							ViewGroup.LayoutParams.WRAP_CONTENT));
-
 			actionBar = (ActionBar) findViewById(com.markupartist.android.widget.actionbar.R.id.actionbar);
+
+			/*
+			 * Create polygon control and add it to the bar
+			 */
+			final DrawPolygonControl polygonControl = new DrawPolygonControl(
+					this);
 			actionBar.addAction(new MapControlAction(mapView,
-					R.drawable.arrow_on, new PanControl()));
-			actionBar.addAction(new MapControlAction(mapView,
-					R.drawable.arrowdown, new DoubleTapZoom()));
+					R.drawable.arrow_on, polygonControl));
+			
+			/*
+			 * Add a button to actually draw a point
+			 */
+			actionBar.addAction(new ActionBar.Action() {
+
+				@Override
+				public void performAction(View view) {
+					polygonControl.addPointAtCenter();
+				}
+
+				@Override
+				public int getDrawable() {
+					return R.drawable.arrowdown;
+				}
+			});
 		}
 	}
 
@@ -108,8 +132,8 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 					metrics.widthPixels, metrics.heightPixels);
 
 			// Configure controls
-//			view.addControl(new PanControl());
-//			view.addControl(new DoubleTapZoom());
+			view.addControl(new PanControl());
+			view.addControl(new DoubleTapZoom());
 
 			view.addMapViewListener(this);
 		} catch (BaseException e) {
@@ -149,6 +173,9 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 
 	@Override
 	public void exclusiveControlChanged() {
+		/*
+		 * Tell the action bar to update the "selected" status of its buttons.
+		 */
 		actionBar.refreshSelectableActions();
 	}
 }
