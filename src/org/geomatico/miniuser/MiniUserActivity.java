@@ -164,11 +164,11 @@ public class MiniUserActivity extends Activity implements MapViewListener {
 	}
 
 	@Override
-	public void overlayContextToShow(ItemContext itemContext) {
+	public void overlayContextToShow(ItemContext itemContext, double x, double y) {
 	}
 
 	@Override
-	public void defaultContextToShow() {
+	public void defaultContextToShow(double x, double y) {
 	}
 
 	@Override

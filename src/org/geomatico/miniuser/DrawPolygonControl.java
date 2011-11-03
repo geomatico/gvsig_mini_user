@@ -122,6 +122,7 @@ public class DrawPolygonControl extends AbstractMapControl implements
 			/*
 			 * Draw geometry
 			 */
+			String srs = getMapView().getMRendererInfo().getSRS();
 			if (points.size() < 3) {
 				// Build point feature collection
 				ArrayList<JTSFeature> features = new ArrayList<JTSFeature>();
@@ -130,8 +131,8 @@ public class DrawPolygonControl extends AbstractMapControl implements
 							gf.createPoint(coordinate)));
 					// ugly hack
 					try {
-						jtsFeature.setSRS("EPSG:900913");
-						jtsFeature.reprojectGeometry("EPSG:900913");
+						jtsFeature.setSRS(srs);
+						jtsFeature.reprojectGeometry(srs);
 					} catch (BaseException e) {
 						throw new RuntimeException(e);
 					}
@@ -155,8 +156,8 @@ public class DrawPolygonControl extends AbstractMapControl implements
 				JTSFeature feature = new JTSFeature(new JTSGeometry(pol));
 				// Ugly hack
 				try {
-					feature.setSRS("EPSG:900913");
-					feature.reprojectGeometry("EPSG:900913");
+					feature.setSRS(srs);
+					feature.reprojectGeometry(srs);
 				} catch (BaseException e) {
 					throw new RuntimeException(e);
 				}
